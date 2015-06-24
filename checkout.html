@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Classic Cinema</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="_styles/style.css">
+        <!--[if lt IE 9]>
+            <script src="IEscript.js"></script>
+            <link rel="stylesheet" href="IEstyle.css">
+        <![endif]-->
+        <script src="_scripts/cookie.js"></script>
+        <script src="_scripts/login.js"></script>
+        <script src="_scripts/checkout.js"></script>
+        <script src="_scripts/cart.js"></script>
+        <script src="_scripts/jquery-1.10.2.min.js"></script>
+        <script src="_scripts/jquery.validate.min.js"></script>
+    </head>
+
+    <body>
+
+        <header>
+            <h1>Classic Cinema</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li> <a href="index.html">Home</a>
+                <li> <a href="classic.html">Classics</a>
+                <li> <a href="scifi.html">Science Fiction and Horror</a>
+                <li> <a href="hitchcock.html">Alfred Hitchcock</a>
+                <li> View Cart
+            </ul>
+
+            <div id="login">
+                <form id="loginForm">
+                    <fieldset>
+                        <legend>Login</legend>
+                        <label for="loginUser">Username: </label>
+                        <input type="text" name="loginUser" id="loginUser"><br>
+                        <label for="loginPassword">Password: </label>
+                        <input type="password" name="loginPassword" id="loginPassword"><br>
+                        <input type="submit" id="loginSubmit" value="Login">
+                    </fieldset>
+                </form>
+            </div>
+
+            <div id="logout">
+                <p>Welcome, <span id="logoutUser"></span><p>
+                <form id="logoutForm">
+                    <input type="submit" id="logoutSubmit" value="Logout">
+                </form>
+            </div>
+
+        </nav>
+
+        <div id="main">
+            <section id="message">
+            </section>
+            <table id="cartList">
+            <tr><th>Item</th><th>Price</th> </tr>
+            </table>
+
+
+            <form id="checkoutForm">
+            <fieldset><legend>Delivery Address</legend>
+            <p>
+			<label for="name">Deliver to:</label>
+            <input id="name" type="text" name="name">
+			</p>
+			<p>
+            <label for="address">Street address:</label>
+            <input id="address" type="text" name="address"><br>
+			</p>
+			<p>
+            <label for="city">City:</label>
+            <input id="city" type="text" name="city"><br>
+			</p>
+			<p>
+            <label for="postcode">Postcode:</label>
+            <input id="postcode" type="text" name="postcode" class="short"><br>
+			</p>
+            </fieldset>
+            <fieldset><legend>Payment Details</legend>
+			<p>
+            <label for="cardType">Card Type:</label>
+            <select id="cardType" name="cardType">
+            <option value="amex">American Express</option>
+            <option value="mcard">MasterCard</option>
+            <option value="visa">Visa</option>
+            </select><br>
+			</p>
+			<p>
+            <label for="cardNumber">Card number:</label>
+            <input id="cardNumber" type="text" name="cardNumber"><br>
+			</p>
+			<p>
+            <label for="cardMonth">Expiry date - Month:</label>
+            <select id="cardMonth" name="cardMonth">
+            <option value="1">01</option>
+            <option value="2">02</option>
+            <option value="3">03</option>
+            <option value="4">04</option>
+            <option value="5">05</option>
+            <option value="6">06</option>
+            <option value="7">07</option>
+            <option value="8">08</option>
+            <option value="9">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            </select>
+			<label class="short" for="cardYear">Year:</label>
+			<select id="cardYear" name="cardYear">
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            </select>
+			</p>
+			<p>
+            <label for="cvc">Verification code:</label>
+            <input id="cvc" type="text" name="cvc" class="short">
+			</p>
+            </fieldset>
+            <input type="submit" value="Checkout">
+            </form>
+        </div>
+
+        <footer>
+            <p>
+            Classic Cinema is not a real store. No products are available, and no money will be accepted.
+            <p>
+            All images from <a href="http://commons.wikimedia.org/wiki/Main_Page">Wikimedia Commons</a> and are believed to be in the public domain.
+            </p>
+        </footer>
+
+    </body>
+</html>

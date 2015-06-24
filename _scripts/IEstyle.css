@@ -1,0 +1,4 @@
+/* Tell IE8 how to format HTML5 elements */
+nav, header, footer, section {
+    display: block;
+}
